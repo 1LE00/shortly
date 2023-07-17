@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Primary */
+  --clr-primary-cyan: 180, 66%, 49%;
+  --clr-primary-dark-violet: 257, 27%, 26%;
+
+  /* Secondary */
+  --clr-secondary-red: 0, 87%, 67%;
+
+  /* Neutral */
+  --clr-neutral-gray: 0, 0%, 75%;
+  --clr-neutral-grayish-violet: 257, 7%, 63%;
+  --clr-neutral-very-dark-blue: 255, 11%, 22%;
+  --clr-neutral-very-dark-violet: 260, 8%, 14%;
+  --clr-black: 0, 0%, 0%;
+  --clr-white: 0, 0%, 100%;
+
+  /* font-sizes */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 2.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1rem;
+  --fs-300: 0.9375rem;
+  --fs-200: 0.85rem;
+  --fs-100: 0.8rem;
+  --fs-default: 1.125rem;
+
+  /* font-families */
+  --ff-default: "Poppins", sans-serif;
+
+  /* starting padding */
+  --padding-inline: 1.75rem;
+}
+
+/* Custom properties */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within,
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: hsl(var(--clr-neutral-grayish-violet));
+  background-color: hsl(var(--clr-white));
+  font-size: var(--fs-default);
+  font-family: var(--ff-default);
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--clr-neutral-grayish-violet));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  color: hsl(var(--clr-neutral-very-dark-blue));
+}
+
+button,
+svg {
+  cursor: pointer;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  -webkit-user-drag: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom properties */
+
+/* Reused styles start*/
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.none {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.smooth {
+  scroll-behavior: smooth;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--clr-primary-dark-violet));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--clr-primary-cyan));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--clr-primary-cyan), 0.8);
+}
+
+::selection {
+  color: hsl(var(--clr-primary-dark-violet));
+  background-color: hsl(var(--clr-primary-cyan));
+}

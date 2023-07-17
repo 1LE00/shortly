@@ -1,0 +1,172 @@
+.header {
+  position: relative;
+  padding: 1.75rem var(--padding-inline);
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.logo svg path {
+  transition: fill 0.35s ease-in-out;
+}
+
+.logo svg:hover path {
+  fill: hsl(var(--clr-primary-cyan));
+}
+
+.nav-container {
+  position: absolute;
+  background-color: hsl(var(--clr-primary-dark-violet));
+  width: calc(100vw - (var(--padding-inline) * 2));
+  top: 150px;
+  border-radius: 8px;
+  padding: 2.5rem var(--padding-inline);
+  gap: 2rem;
+  transition: all 0.25s ease-in;
+  overflow: hidden;
+}
+
+.nav-container.visible {
+  top: 75px;
+}
+
+.nav-container a {
+  width: 100%;
+  color: hsl(var(--clr-white));
+  font-size: var(--fs-300);
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar {
+  position: relative;
+  top: -100vw;
+  border-bottom: 1px solid hsl(var(--clr-neutral-gray), 0.25);
+  transition: all 0.35s ease-in;
+}
+
+.navbar > a {
+  padding-block: 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.nav-container a:hover {
+  background-color: hsl(var(--clr-white), 0.15);
+  color: hsl(var(--clr-neutral-very-dark-violet));
+}
+
+.access {
+  position: relative;
+  gap: 1rem;
+  top: 100vw;
+  transition: all 0.35s ease-out;
+}
+
+:is(.navbar, .access).visible {
+  top: 0;
+}
+
+.access .login {
+  padding-block: 0.5rem;
+}
+
+.access .sign-up {
+  position: relative;
+  background-color: hsl(var(--clr-primary-cyan));
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  overflow: hidden;
+}
+
+.access .sign-up:hover {
+  background-color: hsl(var(--clr-primary-cyan));
+  color: hsl(var(--clr-white));
+  text-decoration: underline;
+}
+
+.access .sign-up::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: all 0.5s ease-in;
+}
+
+.access .sign-up:hover::before {
+  background-color: hsl(var(--clr-white), 0.45);
+}
+
+.nav-toggler svg path {
+  transition: all 0.45s ease-out;
+}
+
+.nav-toggler:is(:hover, :active) svg path {
+  fill: hsl(var(--clr-primary-dark-violet));
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+  :is(.nav-container, .navbar, .access) {
+    position: static;
+    flex-direction: row;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    width: auto;
+  }
+
+  .nav-container {
+    flex-grow: 1;
+  }
+
+  .navbar {
+    flex-grow: 1;
+    gap: 2rem;
+  }
+
+  .nav-container a {
+    color: hsl(var(--clr-neutral-grayish-violet));
+    width: auto;
+    font-weight: 500;
+    margin-block-end: 0;
+  }
+
+  .nav-container a:not(.sign-up) {
+    position: relative;
+  }
+
+  .nav-container a:not(.sign-up)::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: hsl(var(--clr-neutral-very-dark-violet));
+    transition: all 0.35s ease;
+  }
+
+  .nav-container a:not(.sign-up):hover::before {
+    width: 100%;
+  }
+
+  .access {
+    gap: 2rem;
+  }
+
+  .access .sign-up {
+    color: hsl(var(--clr-white));
+  }
+
+  .nav-toggler {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 2.5rem var(--padding-inline);
+  }
+}

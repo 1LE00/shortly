@@ -1,0 +1,36 @@
+.btn {
+  position: relative;
+  color: hsl(var(--clr-white));
+  font-size: var(--fs-default);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: hsl(var(--clr-primary-cyan));
+  border: 2px solid transparent;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: all 0.5s ease-in;
+}
+
+.btn:hover::before {
+  background-color: hsl(var(--clr-white), 0.5);
+}
+
+.btn.copied {
+  background-color: hsl(var(--clr-primary-dark-violet));
+}
+
+.btn.copied:hover {
+  border-color: hsl(var(--clr-primary-dark-violet));
+  background-color: transparent;
+  color: hsl(var(--clr-primary-dark-violet));
+}
+
+.btn.copied::before {
+  content: none;
+}

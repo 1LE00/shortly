@@ -1,0 +1,125 @@
+.shortly-container {
+  position: relative;
+  gap: 2rem;
+  padding-block: 7.5rem 5rem;
+}
+
+.shortly {
+  border-radius: 5px;
+  background: hsl(var(--clr-primary-dark-violet))
+    url(../../assets/icons/bg-shorten-mobile.svg) no-repeat top right;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.input-container > label {
+  position: absolute;
+  left: -99999px;
+}
+
+input {
+  background-color: hsl(var(--clr-white));
+  padding: 0.75rem;
+  width: 100%;
+  font-size: var(--fs-200);
+  border-radius: 5px;
+  border: 3px solid transparent;
+}
+
+input.has-border {
+  border-color: hsl(var(--clr-secondary-red));
+}
+
+input::placeholder {
+  font-size: var(--fs-100);
+  font-weight: 500;
+  transition: font-size 0.25s ease-in;
+}
+
+input.has-border::placeholder {
+  color: hsl(var(--clr-secondary-red));
+}
+
+input:focus-visible::placeholder {
+  font-size: 0.6rem;
+}
+
+.error {
+  color: hsl(var(--clr-secondary-red));
+  font-size: var(--fs-100);
+  margin-block-start: 0.5rem;
+}
+
+.form-btn {
+  margin-block-start: 1rem;
+}
+
+.form-btn .btn {
+  width: 100%;
+  border-radius: 5px;
+  font-size: var(--fs-300);
+}
+
+.form-btn .btn:disabled {
+  cursor: not-allowed;
+}
+
+.results {
+  gap: 2rem;
+}
+
+.results.fixed {
+  max-height: 608px;
+  overflow: auto;
+}
+
+.local-storage {
+  color: hsl(var(--clr-secondary-red));
+  font-size: var(--fs-300);
+  font-weight: 500;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (min-width: 768px) {
+  .shortly-container {
+    padding-block: 5.5rem 5rem;
+  }
+
+  .shortly {
+    background-image: url(../../assets/icons/bg-shorten-desktop.svg);
+    padding: 2.5rem 3.5rem;
+    border-radius: 8px;
+  }
+
+  form.flex-column {
+    position: relative;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .input-container {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .error {
+    position: absolute;
+    bottom: -25px;
+  }
+
+  .form-btn {
+    margin-block-start: 0;
+    width: 180px;
+  }
+
+  .results {
+    gap: 1rem;
+  }
+
+  .results.fixed {
+    max-height: 475px;
+  }
+}

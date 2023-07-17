@@ -1,0 +1,88 @@
+.result-card {
+  background-color: hsl(var(--clr-white));
+  border-radius: 5px;
+}
+
+.original-url {
+  border-bottom: 1px solid hsl(var(--clr-neutral-gray));
+}
+
+.original-url {
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.original-url > a,
+.shorten-url > a {
+  color: hsl(var(--clr-neutral-very-dark-blue));
+  font-weight: 500;
+  font-size: var(--fs-300);
+  transition: color 0.25s ease-in;
+}
+
+.original-url > a:hover {
+  color: hsl(var(--clr-neutral-very-dark-blue), 0.75);
+}
+
+.shorten-url-container {
+  padding: 1rem;
+}
+
+.shorten-url {
+  margin-block-end: 1rem;
+}
+
+.shorten-url > a {
+  color: hsl(var(--clr-primary-cyan));
+}
+
+.shorten-url > a:hover {
+  color: hsl(var(--clr-primary-cyan), 0.5);
+}
+
+.btn-copy {
+  width: 128px;
+}
+
+.btn-copy .btn {
+  width: 100%;
+  border-radius: 5px;
+  font-size: var(--fs-300);
+  transition: all 0.4s ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  .result-card {
+    flex-direction: row;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .original-url {
+    border: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .shorten-url-container {
+    flex-direction: row;
+    width: auto;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .shorten-url {
+    margin: 0;
+    width: auto;
+    text-align: end;
+  }
+
+  .btn-copy .btn {
+    padding: 0.5rem 2rem;
+  }
+}

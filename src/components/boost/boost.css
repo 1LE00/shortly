@@ -1,0 +1,22 @@
+.boost {
+  gap: 1.5rem;
+  min-height: 300px;
+  justify-content: center;
+  background: hsl(var(--clr-primary-dark-violet))
+    url(../../assets/icons/bg-boost-mobile.svg) no-repeat;
+  background-size: cover;
+  padding-inline: var(--padding-inline);
+}
+
+.boost h2 {
+  color: hsl(var(--clr-white));
+  font-size: clamp(1.45rem, 7vw, var(--fs-700));
+}
+
+@media screen and (min-width: 768px) {
+  .boost {
+    gap: 2rem;
+    min-height: 270px;
+    background-image: url(../../assets/icons/bg-boost-desktop.svg);
+  }
+}

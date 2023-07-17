@@ -1,0 +1,125 @@
+.footer {
+  gap: 4rem;
+  padding-block: 4rem;
+  padding-inline: var(--padding-inline);
+  background-color: hsl(var(--clr-neutral-very-dark-violet));
+}
+
+.footer-navigation {
+  gap: 4rem;
+  justify-content: center;
+}
+
+.footer-navigation > section {
+  width: 100%;
+  max-width: 190px;
+}
+
+.footer-social-icons {
+  gap: 1.5rem;
+}
+
+.footer-links {
+  gap: 1rem;
+}
+
+.footer-section-title {
+  color: hsl(var(--clr-white));
+  font-size: var(--fs-400);
+  margin-block-end: 1.5rem;
+}
+
+.footer-links > a {
+  position: relative;
+  font-size: var(--fs-300);
+  font-weight: 500;
+  transition: color 0.25s ease-in-out;
+}
+
+.footer-links > a:hover {
+  color: hsl(var(--clr-primary-cyan));
+}
+
+.footer-links > a::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: hsl(var(--clr-primary-cyan));
+  transition: width 0.25s ease-out;
+}
+
+.footer-links > a:hover::before {
+  width: 100%;
+}
+
+.footer-logo svg path {
+  fill: hsl(var(--clr-white));
+  transition: fill 0.45s ease-out;
+}
+
+.footer-logo svg:hover path {
+  fill: hsl(var(--clr-primary-cyan));
+}
+
+.footer-social-icons > a svg path {
+  transition: 0.35s ease;
+}
+
+.footer-social-icons > a:hover svg path {
+  fill: hsl(var(--clr-primary-cyan));
+}
+
+@media screen and (min-width: 525px) {
+  .footer-navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer-navigation {
+    flex-grow: 1;
+    width: auto;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    text-align: initial;
+  }
+
+  .footer-navigation > section {
+    width: auto;
+    max-width: none;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-block: 4.5rem;
+  }
+  .footer-navigation {
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer,
+  .footer-navigation {
+    gap: 7.5rem;
+  }
+
+  .footer-navigation {
+    justify-content: flex-end;
+  }
+}

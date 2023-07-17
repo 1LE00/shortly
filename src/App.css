@@ -1,0 +1,22 @@
+.App {
+  max-width: 1536px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --padding-inline: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --padding-inline: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --padding-inline: 10.75rem;
+  }
+}

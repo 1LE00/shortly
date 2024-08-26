@@ -41,5 +41,5 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [SHRTCODE](https://shrtco.de/) - The privacy-friendly URL Shortener
+- [SHRTCODE](https://shrtco.de/) - The privacy-friendly URL Shortener(SHRTCODE site seems to be not working, so can't shorten URLs)
 
